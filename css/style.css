@@ -1,0 +1,335 @@
+/* Start Variables */
+:root {
+  --main-color: #0075ff;
+  --second-color: #242526;
+  --three-color: #3a3b3c;
+  --four-color:white;
+}
+
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile screens */
+/* Small screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* ========================= Work Space ======================================= */
+.section.signin {
+  background: linear-gradient(to left, #005c97, #363795);
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.section.signin .bullets .bullet {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5.7px);
+}
+.section.signin .bullets .bullet:nth-of-type(1) {
+  width: 500px;
+  height: 500px;
+  animation: bulletsAnimation1 3s infinite alternate ease-in-out;
+}
+.section.signin .bullets .bullet:nth-of-type(2) {
+  width: 200px;
+  height: 200px;
+  right: 100px;
+  animation: bulletsAnimation2 2s infinite alternate ease-in-out;
+}
+.section.signin .bullets .bullet:nth-of-type(3) {
+  width: 200px;
+  height: 200px;
+  bottom: 100px;
+  animation: bulletsAnimation3 2s 1s infinite alternate ease-in-out;
+}
+.section.signin .bullets .bullet:nth-of-type(4) {
+  width: 200px;
+  height: 200px;
+  bottom: 100px;
+  right: 200px;
+  animation: bulletsAnimation4 5s 1s infinite alternate ease-in-out;
+}
+@keyframes bulletsAnimation1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+@keyframes bulletsAnimation2 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+@keyframes bulletsAnimation3 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translate(50px, 50px);
+  }
+}
+@keyframes bulletsAnimation4 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50px) rotate(360deg);
+  }
+}
+.warning {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  color: white;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.7px);
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  transition: 0.5s;
+  z-index: 321;
+  background-color: #d00808;
+  font-weight: 700;
+}
+.section.signin .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.section.signin .container .box {
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.7px);
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  padding: 40px;
+  border-radius: 15px;
+  width: 350px;
+}
+.star {
+  color: rgb(255, 106, 0);
+}
+.section.signin .container .box form {
+  display: flex;
+  flex-direction: column;
+}
+.section.signin .container .box form h5 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: white;
+}
+.section.signin .container .box form > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.section.signin .container .box form > div label {
+  color: #fff;
+  font-size: 12px;
+}
+.show-pass {
+  position: absolute;
+  bottom: 12px;
+  color:rgba(255, 255, 255, 50%);
+  cursor: pointer;
+}
+.show-pass .show {
+  display: none;
+}
+.section.signin .container .box form > div > input {
+  background-color: transparent !important;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 10px 10px 10px 25px;
+  margin-top: 10px;
+  color: white !important;
+}
+.section.signin .container .box form > div > input:focus {
+  outline: none;
+  color: white;
+}
+.section.signin .container .box form > div > input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  font-size: 14px;
+}
+.section.signin .container .box form .torms .termsofuser {
+  font-weight: bold;
+}
+.section.signin .container .box form .submit {
+  padding: 10px;
+  border: none;
+  margin-bottom: 25px;
+  background: linear-gradient(to left, #005c97, #363795);
+  outline: 1px solid rgba(255, 255, 255, 0);
+  color: white;
+  font-weight: bolder;
+  border-radius: 5px;
+  transition: 0.3s;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.section.signin .container .box form .submit:hover {
+  outline: 1px solid rgba(255, 255, 255, 0.19);
+}
+.section.signin .container .box .social {
+  margin-bottom: 30px;
+}
+.section.signin .container .box .social .title {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: white;
+}
+.section.signin .container .box .social .icon {
+  display: flex;
+  justify-content: center;
+}
+.section.signin .container .box .social .icon a {
+  text-align: center;
+  padding: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 16px;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+.section.signin .container .box .social .icon .facebook {
+  background-color: #4267B2;
+}
+.section.signin .container .box .social .icon .facebook:hover {
+  background-color: #4257B2;
+}
+.section.signin .container .box .social .icon .twitter {
+  background-color: #1DA1F2;
+}
+.section.signin .container .box .social .icon .twitter:hover {
+  background-color: #1D91F2;
+}
+.section.signin .container .box .or-sign {
+  text-align: center;
+}
+.section.signin .container .box .or-sign span {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+}
+.section.signin .container .box .or-sign a {
+  color: #86d3ff;
+  transition: 0.3s;
+}
+.section.signin .container .box .or-sign a:hover {
+  color: #59bdf7;
+}
+.section.signin .container .box.signup {
+  display: none;
+}
+.section.signin .container .box.signin .forgot-pass {
+  margin-bottom: 22px;
+}
+.section.signin .container .box.signin .forgot-pass a {
+  width: max-content;
+  font-size: 14px;
+  color: white;
+  margin-left: auto;
+}
+.section.signin .container .box.signup .torms {
+  appearance: none;
+}
+.section.signin .container .box.signup .torms + span {
+  position: relative;
+  padding-left: 25px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.section.signin .container .box.signup .torms + span::before, .section.signin .container .box.signup .torms + span::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.section.signin .container .box.signup .torms + span::after {
+  background-color: #4267B2;
+  width: 14px;
+  height: 14px;
+  left: 2px;
+  display: none;
+}
+.section.signin .container .box.signup .torms:checked + span {
+  color: rgb(255, 255, 255);
+}
+.section.signin .container .box.signup .torms:checked + span::after {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
